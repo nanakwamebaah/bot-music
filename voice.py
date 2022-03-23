@@ -5,8 +5,8 @@ import os
 from dotenv import load_dotenv
 
 client = commands.Bot(command_prefix="!")
-load_dotenv()
-token = os.getenv('TOKEN')
+#load_dotenv()
+#token = os.getenv('TOKEN')
 
 @client.command()
 async def play(ctx, url : str):
@@ -71,6 +71,6 @@ async def stop(ctx):
     voice.stop()
 
 
-client.run(token)
+client.run(os.environ('TOKEN'))
 
 
